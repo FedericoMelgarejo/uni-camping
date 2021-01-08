@@ -35,7 +35,7 @@ const categoriesApi = require("./routes/api/categoriesApi")
 
 
 //servidor
-const PUERTO = 8080;
+const PUERTO = process.env.PORT || 8080;
 app.listen(PUERTO, () => console.log("El servidor esta funcionando en el puerto " + PUERTO + " ---> http://localhost:8080/"))
 
 //URL
