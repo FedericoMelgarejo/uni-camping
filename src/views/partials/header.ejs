@@ -1,0 +1,129 @@
+<header class="">
+    <!--====================================
+    =            Barra superior            =
+    =====================================-->
+    <div class="container-fluid colorBarraSuperior">
+        <div class="container">
+            <div class="row barraSuperior  d-md-flex">
+                <div class="col-5">
+                    <ul>
+                        <!-- Redes sociales -->
+                        <li class="align-middle"><i class="fab fa-telegram-plane"></i></li>
+                        <li class="align-middle"><i class="fab fa-facebook-f"></i></li>
+                        <li class="align-middle"><i class="fab fa-twitter"></i></li>
+                        <li class="align-middle"><i class="fas fa-map-marker-alt"></i></li>
+                    </ul>
+                </div>
+                <!-- ingresar/registrarse -->
+                <div class="col-7 text-right">
+                    <ul>
+                        <% if (typeof user == "undefined") { %>
+                        <li class="" ><a href="/users/login" style="color: lightgray;">Ingresar</a></li>
+                        <li class="bar"><a href="/users/register" style="color: lightgray;">Registrarse</a></li>
+                        <% } else if (user.rol == "admin"){ %>
+                        <li class=""><a href="/users/logout"style="color: lightgray;">Cerrar sesión</i></a></li>
+                        <li class="bar"></li><a href="/users/profile" style="color: lightgray;">Perfil</a></li>
+                        <li class="bar"><a href="/products/admin/1" style="color: lightgray;">Admin</a></li>
+                        <% } else { %>
+                        <li class=""><a href="/users/logout"style="color: lightgray;">Cerrar sesión</i></a></li>
+                        <li class="bar"><a href="/users/profile" style="color: lightgray;">Perfil</a></li>
+
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====  End of Barra superior  ====-->
+    <!--====================================
+    =            Barra inferior            =
+    =====================================-->
+    <div class="container-fluid colorBarraInferior">
+        <div class="container">
+            <nav class="row barraInferior">
+                <!-- Carrito de compras -->
+                <div class="col-3 d-md-none">
+                    <a href="/products/cart" style="color: white;"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <!-- logo -->
+                <div class="col-6 col-md-4 col-lg-3 order-md-1 text-center text-md-left contenedorLogo my-3">
+                    <a href="/">
+                    <img class="imgLogo" src="/img/logo-camping-border0.png" alt="">
+                    </a>
+                </div>
+                <!-- Boton desplegable -->
+                <div class="col-3 col-md-3 order-md-4  d-lg-none">
+                    <div class="row">
+                        <div class="col d-none d-md-inline">
+                            <a href="/products/cart" style="color: white;"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                        <div class="col">
+                            <button class="align-middle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fa fa-bars fa-lg py-1 text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Buscador -->
+                <div class="col-12 col-md-5 order-md-2 d-lg-none buscadorContainer">
+                    <form class="mb-4 mb-md-0" action="/products/search">
+                        <input type="text" name="search" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    
+                </div>
+                <!-- navbar a desplegar -->
+                <div class="collapse navbar-collapse order-5" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        <li><a class="text-white" href="/products">Productos</a></li>
+                        <li><a class="text-white" href="/products/1">Carpas</a></li>
+                        <li><a class="text-white" href="/products/2">Pesca</a></li>
+                        <li><a class="text-white" href="/products/3">Accesorios</a></li>
+                        <li><a class="text-white" href="/products/4">Indumentaria</a></li>
+                        <li><a class="text-white" href="/products/5">Calzado</a></li>
+                        <li><a class="text-white" href="/products/6">Rifles</a></li>
+                        <li><a class="text-white" href="/">Home<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house-door" fill="white" >
+                            <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"></path>
+                            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+                          </svg></a></li>
+                    </ul>
+                </div>
+                <!-- Navegador desplegado (lg) -->
+                <div class="d-none d-lg-flex col-lg-7 order-6 pr-0">
+                    <div class="row w-100 justify-content-between navContentLg">
+                        <li><a class="text-white" href="/products">Productos</a></li>
+                        <li><a class="text-white" href="/products/1">Carpas</a></li>
+                        <li><a class="text-white" href="/products/2">Pesca</a></li>
+                        <li><a class="text-white" href="/products/3">Accesorios</a></li>
+                        <li><a class="text-white" href="/products/4">Indumentaria</a></li>
+                        <li><a class="text-white" href="/products/5">Calzado</a></li>
+                        <li><a class="text-white" href="/products/6">Rifles</a></li>
+                        <a href="/products/cart" style="color: white;"> <i class="fas fa-shopping-cart"></i></a>
+                     
+                        <!-- 
+                        <form class="" action="/products/search">
+                            <input type="text" name="search" placeholder="Buscar...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+
+                     
+                        
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        -->
+
+                    </div>
+
+                    
+                </div>
+                <div class="d-none d-lg-flex col-lg-2 order-lg-8">
+                <form class="" action="/products/search">
+                    <input type="text" name="search" placeholder="Buscar...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                </div>
+        </div>
+    </div>
+    </div>
+    <!--====  End of Barra inferior  ====-->
+</header>

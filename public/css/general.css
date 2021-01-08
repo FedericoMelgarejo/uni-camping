@@ -1,0 +1,886 @@
+/*
+ * Header
+ */
+
+ header .colorBarraSuperior{
+    background-color: #534317;
+}
+header .colorBarraInferior{
+    background-color: black;
+}
+header .barraSuperior{
+    color: lightgray;
+  	font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+header .barraSuperior ul{
+    padding: 3px;
+}
+header .barraSuperior i{
+    padding: 2px;
+}
+header .barraInferior{
+    background-color: black;
+    color: white;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+}
+header ul li{
+    display: inline;
+}
+header .bar{
+    padding-left: 3px;
+    border-left:1px solid lightgray ;
+}
+header nav{
+	background-color: black
+}
+header nav .logo{
+	color: white;
+	font-size: 3.2rem;
+}
+header nav .contenedorLogo{
+    padding: 0;
+}
+:root{
+    --color-amarillo:#EAC926;
+    --color-grisClaro: #ebebeb;
+    --color-grisOscuro: #666666;
+    --color-azul: #03264C;
+    --color-verde: #39b54a;
+    --color-celeste: #1259c3;
+
+}
+header .nav-link{
+	color: white !important;
+	align-self: center;
+}
+header .fa-shopping-cart{
+    font-size: 23px;
+}
+header .buscardorContainer{
+    text-align: center;
+}
+header form{
+    background-color: white;
+    border: 1px solid var(--color-grisClaro);
+    border-radius: 5px;
+    padding: 0px 8px;
+}
+header form input{
+    border: 0;
+    border-right: 2px solid var(--color-grisClaro);
+    padding-right: 5px;
+    width: 93%;
+}
+header form button{
+    background:0;
+    border:0;
+    padding:0px;
+    color: black;
+}
+header nav div{
+    align-self: center;
+    text-align: center;
+}
+header nav .imgLogo{
+    height: 50px
+}
+@media (min-width: 768px) { 
+    header nav .imgLogo{
+    height: 60px
+    }
+    header form{
+        margin-bottom: 0;
+    }
+    header form input{
+    border: 0;
+    border-right: 2px solid var(--color-grisClaro);
+    padding-right: 5px;
+    width: 90%;
+    }
+    header nav .contenedorLogo{
+        padding: 0px 15px;
+    }
+
+}
+@media (min-width: 992px) { 
+    header form input{
+        border: 0;
+        border-right: 2px solid var(--color-grisClaro);
+        padding-right: 5px;
+        width: 81%;
+        }
+    header .navContentLg{
+        margin: 0;
+    }
+    header .navContentLg li{
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        list-style: none;
+    }
+    header .navContentLg li a{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 14px
+    }
+    header .navContentLg button{
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+    header .navContentLg button:hover{
+        color: white;
+    }
+    header .navContentLg button:focus{
+        border: 0;
+    }
+    header .btn:hover{
+    color: white;
+    text-decoration: none;
+    }
+    header .btn:focus{
+    border: 0px
+    }
+ }
+
+
+
+
+
+
+ /*
+  * Footer
+  */
+
+
+
+
+
+  footer{
+    background-color: black;
+    color: white;
+}
+footer ul{
+    padding: 0;
+    list-style: none;
+}
+footer ul li{
+    padding: 0;
+    text-decoration: none;
+}
+footer .seguinos{
+    border-radius: 3%;
+    padding: 4px;
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+}
+footer .contactanos{
+    border-radius: 5%;
+    padding: 5px;
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+}
+.icon-facebook {
+	background: #2E406E;
+}
+
+.icon-twitter {
+	background: #339DC5;
+}
+
+.icon-youtube {
+	background: #E83028;
+}
+
+.icon-instagram {
+	background: #3F60A5;
+}
+.icon {
+	color: white;
+    text-decoration: none;
+	padding: .7rem;
+	display: inline;
+}
+.metodosPago{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+}
+.iconosTarjetas{
+    font-size: 20px;
+}
+.d-f{
+    float: left;
+}
+
+
+
+
+/*
+ * Index
+ */
+
+
+
+
+/* BANNER */
+.mainIndex .banner{
+    width: 100%;
+    height: 300px;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.mainIndex .banner .bienvenido{
+    font-size: 70px;
+    vertical-align: middle;
+}
+.fa-chevron-down{
+    font-size: 50px;
+}
+.mainIndex .Categorias{
+    font-family: 'Montserrat', sans-serif;
+}
+.mainIndex .marcas img{
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .mainIndex .banner{
+      height: 400px;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        color: black;
+        font-size: 60px;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover, .carousel-control-next:focus, .carousel-control-prev:focus{
+        color: black;
+    }
+  }
+
+/*CAROUSEL*/
+
+.tituloCarousel{
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size:2rem;
+}
+.ContenedorCarousel{
+    text-align: center;
+}
+
+.mainIndex .oferta{
+ color: rgb(168, 200, 28);
+}
+.mainIndex .barraHr{
+    padding-top: 50px;
+}
+
+/*CATEGORIAS*/
+
+.mainIndex .Categorias{
+    padding-left: 10px;
+    justify-content: center;
+}
+.mainIndex .Categorias img{
+    border: 1px solid;
+    border-radius: 20px;
+    border-width: 2px;
+}
+.mainIndex .textoCat{
+    font-size:15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.431);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.mainIndex .catIr{
+    font-size: 13px;
+}
+
+
+/*MARCAS*/
+
+@media (max-width: 375px) {
+.mainIndex .marcas img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+}
+.logotipo{
+    margin: 5px;
+    filter:grayscale(100%);
+    opacity:.5;
+    transition:0.6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    }
+    
+.logotipo:hover{
+    filter:grayscale(0%);
+    opacity:1;
+    margin-top:-4px;
+    -webkit-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    }
+
+
+
+
+
+/*
+ * productAdd
+ */
+
+ /* cuerpo de formulario*/
+.mainProductAdd .encabezado p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin:0 auto;
+    border-bottom: 1px solid #a8ab7a;
+}
+.mainProductAdd .titles{
+    background-color: #534317;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 4px solid #e2ddf1;
+}
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.mainProductAdd #paginacion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+} 
+.mainProductAdd .derecha{ 
+    float: right;
+}
+.mainProductAdd .izquierda{
+     float: left;
+}
+
+.mainProductAdd .Categorias{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    justify-content: center;
+}
+
+.mainProductAdd .Categorias img{
+    border: 1px solid;
+    border-radius: 20px;
+    border-width: 2px;
+}
+.mainProductAdd .textoCat{
+    font-size:16px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0.431);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.mainProductAdd.catIr{
+    font-size: 13px;
+}
+.mainProductAdd form{
+    align-self: flex-end;
+}
+.mainProductAdd .btn{
+    align-self: flex-end;
+    background-color: white;
+    margin-left: 15px;
+}
+
+
+
+
+/*
+ * productAdm
+ */
+
+ /* cuerpo de formulario*/
+
+.mainProductAdm .encabezado p{
+    background-color: #534317;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin:10px auto;
+    padding: 10px;
+}
+.mainProductAdm .formulario{
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.mainProductAdm .botones{
+    color: white;
+    background-color:  #4d582a;
+    margin-left: 20px;
+}
+
+
+
+@media(min-width:768px){
+    .mainProductAdm{
+        padding: 5px 30px;
+    }
+}
+
+
+@media(min-width:1024px){
+    .mainProductAdm{
+        padding: 5px 50px;
+    }
+}
+
+@media(min-width:1440px){
+    .mainProductAdm{
+    padding: 5px 200px;
+    }
+}
+
+/*
+ * productShow
+ */
+
+ /* cuerpo de formulario*/
+
+ .mainProductShow .encabezado p{
+    background-color: #534317;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin:10px auto;
+    padding: 10px;
+}
+.mainProductShow .formulario{
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.mainProductShow .botones{
+    color: white;
+    background-color:  #4d582a;
+    margin-left: 20px;
+}
+
+
+
+
+@media(min-width:768px){
+    .mainProductShow{
+        padding: 5px 30px;
+    }
+}
+
+
+@media(min-width:1024px){
+    .mainProductShow{
+        padding: 5px 50px;
+    }
+}
+
+@media(min-width:1440px){
+    .mainProductShow {
+    padding: 5px 200px;
+    }
+}
+
+
+    
+/*
+ * productCart 
+ */
+/* general*/
+.mainProductCart body{
+    height: 1200px;
+}
+.mainProductCart h4, span{
+    font-family: 'Roboto', sans-serif;
+    font-size:14px;
+    margin-top: 20px;
+    width: max-content;
+}
+/* cuerpo de formulario*/
+.mainProductCart .encabezado p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #534317;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+
+}
+.mainProductCart #paginacion {
+    padding-bottom: 20px;
+    overflow: hidden;
+} 
+.mainProductCart .derecha{ 
+    float: right;
+}
+.mainProductCart .izquierda{ 
+    float: left;
+}
+.mainProductCart form {
+    box-sizing: border-box;
+}   
+.mainProductCart .imagen img{
+    width: 65px;
+}
+.mainProductCart .codigo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.mainProductCart .card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border:none;
+    font-size:14px;  
+}
+.mainProductCart .card-body{
+    padding: 0px;
+}
+.mainProductCart .codigo select{
+   margin-top: 2px;
+}
+.mainProductCart .cantidad-precio{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mainProductCart .precio{
+   margin-top:15px;
+}
+.mainProductCart .tachito{
+    margin-top:15px ;
+    margin-left: 10px;;
+    font-size: small;
+    background-color: white;
+    border:none;
+}
+.mainProductCart .total{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right:35px; 
+
+}
+
+.mainProductCart .custom-select{
+    width: 90%;
+}  
+.mainProductCart .botonesAccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.mainProductCart .botones{
+    color: white;
+    background-color:  #4d582a
+} 
+.mainProductCart .accion{
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+
+
+@media(max-width:375px){
+    .mainProductCart .imagen{
+        
+    }
+    .mainProductCart #column{
+        display: none;
+    }
+
+}
+
+@media(min-width:768px){
+    .mainProductCart .card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        border:none;
+        font-size:14px;
+        margin-top: 30px;
+    }
+    .mainProductCart .card-body{
+        padding: 0px;
+    }
+    .mainProductCart .codigo select{
+       margin-top: 28px;
+    }
+    .mainProductCart .precio{
+        margin-top:35px;
+    }
+    .mainProductCart .pago-envio h5{
+        font-size:18px;
+    }
+    .mainProductCart .tachito{
+        margin-top:35px ;
+        margin-left: 45px;
+       
+    }
+    .mainProductCart .total{
+        margin-right:95px;
+    }
+    .mainProductCart .pago-envio{
+        display:flex;
+        flex-direction: row;
+    }
+    .mainProductCart .botonesAccion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 30px 0;
+    }
+    .mainProductCart .botones{
+        width: 200px;
+    } 
+}
+
+
+@media(min-width:1024px){
+    .mainProductCart .precio{
+        margin-top:50px;
+    }
+    .mainProductCart .pago-envio{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+    }
+    .mainProductCart .codigo select{
+        margin-top: 40px;
+     }
+     
+    .mainProductCart .tachito{
+        margin-top:40px ;
+        margin-left: 70px;
+    }
+    .mainProductCart .total{
+        margin-right:155px;
+    }
+    .mainProductCart .custom-select{
+        margin-top: -5px;
+        width: 90%;
+    }
+    
+    .mainProductCart .botones{
+        width: 250px;
+    }
+}
+@media(min-width:1440px){
+    .mainProductCart .tituloCarousel{
+        display: flex;
+        justify-content: center;
+    } 
+    
+    .mainProductCart .total{
+        margin-right:185px;
+        margin-bottom: 10px;
+    }
+   
+}
+
+
+
+
+/*
+ * productDetail
+ */
+
+
+
+
+
+ .mainProductDetail section .article1{
+	padding: 0px 30px;
+}
+.mainProductDetail section .article1 .mainImage{
+	height: 60vh;
+}
+.mainProductDetail section .article1 .secondaryImages{
+	height: 60vh;
+	overflow-y: scroll;
+}
+.mainProductDetail section .article2 .precio{
+	font-size: 30px;
+}
+.titleSection{
+	background-color: #534317;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	margin:0px;
+}
+.mainProductDetail section .article2 .envio{
+	background-color: #7daa1e;
+	color: white;
+	padding: 5px;
+}
+.btn-carrito{
+	color: white;
+    background-color:#4d582a;
+    border-color: transparent;
+}
+@media (min-width: 992px) {
+	.mainProductDetail section .article1{
+	padding-right: 15px;
+	}
+	.mainProductDetail section .article1 .mainImage{
+	height: 70vh;
+	background-image: url("http://placehold.it/900x700");
+	}
+	.mainProductDetail section .article1 .secondaryImages{
+	height: 70vh;
+	overflow-y: scroll;
+	}
+	.mainProductDetail section .article2{
+		height: 70vh;
+		padding-left: 0px;
+	}
+	.mainProductDetail section .article2 .card-header:first-child{
+		border-radius: 0px
+	}
+}
+
+.mainProductDetail .tiltes{
+	background-color: #534317;
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	border-bottom: 4px solid #e2ddf1
+}
+.montserrat{
+	font-family: 'Montserrat', sans-serif;
+}
+.blackColor{
+	color: black
+}
+.mainProductDetail section .article2 .borderRadiusCalcular2{
+	border-radius: 0px 10px 10px 0px
+}
+.mainProductDetail section .article2 .borderRadiusCalcular{
+	border-radius: 10px 0px 0px 10px
+}
+
+
+
+
+
+/*
+ * Register
+ */
+
+
+ .mainRegister .register{
+    background-color: #4d582a ;
+    color: white;
+    width:260px;
+}
+.mainRegister .titles{
+    background-color: #534317;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+    
+.contenido{
+    border-bottom: 3px solid #e2ddf1;
+}
+.contenido:hover{
+    border: 3px solid #e2ddf1;
+    border-radius:7px;
+}
+
+.categoriaSection{
+    
+    background-position-y: center;
+    height: 200px;
+}
+
+.avatar{
+    background-image:url("https://innostudio.de/fileuploader/images/default-avatar.png");
+    width: 200px;
+    height: 200px;
+    object-fit:contain;
+    background-position: center;
+
+}
+.titleProduct{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+.anchorProducs:hover{
+    color: black;
+    text-decoration: none; 
+}
+.anchorProducs:focus{
+    outline: 0px;
+}
+.prev_arrow{
+    position: absolute;
+    font-size: 50px;
+    right: 0%;
+    top: 50%;
+}
+.next_arrow{
+    z-index: 20;
+    position: absolute;
+    font-size: 50px;
+    left: 0%;
+    top: 50%;
+}
+
+.productosIndex{
+    margin: 5px;
+    transition:0.6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    }
+    
+.productosIndex:hover{
+    filter:grayscale(0%);
+    opacity:1;
+    margin-top:-4px;
+    -webkit-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    }
+.productosProd{
+    transition:0.6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    }
+    
+.productosProd:hover{
+    -webkit-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 20px 26px -9px rgba(0,0,0,0.75);
+}
+.borderTransparent{
+    border-color: transparent;
+}
+

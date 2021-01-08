@@ -1,0 +1,166 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+    <!-- Header -->
+    <%- include('partials/header.ejs') %>
+    <!--=============================
+    =            Content            =
+    ==============================-->
+    <main class="mainIndex">
+        <!--CAJA CONTENIDO GENERAL-->
+        <div class="Home">
+
+            <!-- BANNER -->
+            <div class="banner" style="background-image: url('https://images4.alphacoders.com/797/797952.jpg');">
+                <div class="text-white text-center">
+                    <p class="m-0 bienvenido">Bienvenido</p>
+                    <p>Todo lo que buscas a un solo click de distancia!</p>
+                    <a class="text-white" href="#carousel"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+
+            <!-- SECCIÓN CAROUSEL OFERTAS-->
+            <%- include('partials/carrouselOfertas.ejs') %>
+             <!-- SECCIÓN CAROUSEL DESTACADO-->
+            <%- include('partials/carrouselRecomendados.ejs') %>
+            
+
+            <!-- SECCION CATEGORIAS -->
+            <div style="background-color: black;">
+                <div class="container" style="background-color: black;">
+                    <div class="row Categorias justify-content-around py-5">
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://i.pinimg.com/originals/c0/5e/25/c05e250c00826262ec0b08e1a58447a8.jpg'); background-position-x: center;background-size: cover; ">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    PESCA
+                                    <a href="/products/1">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://cdn.shopify.com/s/files/1/0028/5812/3364/collections/8d42227c21dc7a936efd8c4be180aeec_large_crop_top.jpg?v=1563629867'); background-position-x: center;background-size: cover;">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    ACCESORIOS
+                                    <a href="/products/3">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://cdn.boatinternational.com/convert/bi_prd/bi/library_images/yBELYqCXQc6Vjg8FX5VE_mens-ski-gear-snippet-Adobe-Stock.jpg/r%5Bwidth%5D=1920/yBELYqCXQc6Vjg8FX5VE_mens-ski-gear-snippet-Adobe-Stock.jpg '); background-position-x: center;background-size: cover;">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    INDUMENTARIA
+                                    <a href="/products/4">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://3.bp.blogspot.com/-r86ZtJQm2h0/T3biMcjdumI/AAAAAAAAA40/AyLru6kd034/s1600/IMG_3125_3.jpg'); background-position-x: center;background-size: cover;">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    CALZADO
+                                    <a href="/products/5">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://c4.wallpaperflare.com/wallpaper/525/141/102/cartridges-arctic-warfare-accuracy-international-l96-sniper-rifle-of-english-manufacture-wallpaper-preview.jpg'); background-position-x: center;background-size: cover;">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    RIFLES
+                                    <a href="/products/6">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-5 col-lg-5 my-5 categoriaSection rounded"
+                            style="background-image: url('https://c0.wallpaperflare.com/preview/701/592/916/landscape-adventure-camp-camping.jpg'); background-position-x: center;background-size: cover;">
+                            <div class="row justify-content-center">
+                                <h4 class="textoCat text-center">
+                                    CARPAS
+                                    <a href="/products/1">
+                                        <h4 class="catIr text-white">Ver más</h4>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- SECCION MARCAS -->
+            <div class="container  justify-content-center my-4">
+                <div class="row justify-content-around my-2">
+                    <div class="marcas logotipo col-4 col-md-2 col-lg-2">
+                        <img class="" src="/img/logo-marcacoleman.png" alt="">
+                    </div>
+                    <div class="marcas logotipo col-4 col-md-2 col-lg-2">
+                        <img class="" src="/img/logo-marcawaterdog.png" alt="">
+                    </div>
+                    <div class="marcas logotipo col-4 col-md-2 col-lg-2">
+                        <img class="" src="/img/logo-marcahummer.png" alt="">
+                    </div>
+                    <div class="marcas logotipo col-4 col-md-2 col-lg-2">
+                        <img class="" src="/img/logo-marcashark.png" alt="">
+                    </div>
+                    <div class="marcas logotipo col-4 col-md-2 col-lg-2">
+                        <img class="" src="/img/logo-marcashimano.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--====  End of Content  ====-->
+    <!-- footer -->
+    <%- include('partials/footer.ejs') %>
+    <!-- scripts -->
+    <%- include('partials/scripts.ejs') %>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.center').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      prevArrow:'<i class="next_arrow fas fa-chevron-circle-left"></i>',
+      nextArrow:'<i class="prev_arrow fas fa-chevron-circle-right"></i>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+        });
+      </script>
+</body>
+
+</html>

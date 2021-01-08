@@ -1,0 +1,194 @@
+<%- include('partials/head.ejs') %>
+
+<body class="montserrat">
+    <!-- Header -->
+    <%- include('partials/header.ejs') %>
+    <!--=============================
+    =            Content            =
+    ==============================-->
+    <main class="mainProductCart">
+        <!-- CUERPO DEL CARRITO-->
+        <div class="container">
+
+            <!-- FORMULARIO  -->
+            <article>
+                <div class="montserrat">
+                    <h5 class="titleSection card-header text-center my-3"><%= title %></h5>
+               
+                  
+                    <%if (totalProductoEnCarrito<=0 || totalProductoEnCarrito== "" || totalProductoEnCarrito==undefined){ %> 
+                        
+                        <div class="text-center mt-5">
+                        <p style="font-size: 25vh; line-height: 140px;" class="m-0">OPPS</p>
+                        <p class="m-0">No hay productos agregados a su carrito</p>
+                        <div class="my-5 accion col">
+                            <a href="/products"><button class="botones btn" type="button">Seguir comprando</button></a>
+                        </div>
+                        </div>
+                    
+                    <%}else{ %> 
+            </div>
+
+            <!--PRODUCTO SELECCIONADO, DESCRIPCION, CANTIDAD DE UNIDADES y PRECIO -->
+            <div class="container">
+
+            
+
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr style="background-color:#59222F ; color: white;">
+                              <th scope="col" class="border-0">
+                                <div class=" px-3 ">Producto</div>
+                              </th>
+                              <th scope="col" class="border-0">
+                                <div class="">Precio</div>
+                              </th>
+                              <th scope="col" class="border-0">
+                                <div class="">Cantidad</div>
+                              </th>
+                              <th scope="col" class="border-0">
+                                <div class="">Remover</div>
+                              </th>
+                            </tr>
+                                  
+                          </thead>
+                          <tbody>
+                            <% productoEnCarrito.forEach(producto => { %>
+                                <% if (producto.id_user == user.id ) { %>
+      
+                            
+                              <tr>
+                              <th scope="row" class="">
+                                <div class="p-2">
+                                  <img src="/img/products/<%- producto.productos.imagenes %> " alt="" width="70" class="img-fluid rounded shadow-sm">
+                                  <div class="ml-3 d-inline-block align-middle">
+                                      <h5 class="mb-0">
+                                          <a href="#" class="text-dark d-inline-block align-middle"><%- producto.productos.nombre %></a>
+                                      </h5>
+                                          <span class="text-muted font-weight-normal font-italic d-block">Categoria:</span>
+                                  </div>
+                                </div>
+                              </th>
+                              <td class="align-middle">
+                                  <strong>$<%- producto.productos.precio %></strong>
+                              </td>
+                              <td class="align-middle">
+                                  <strong><%- producto.cantidad %></strong>
+                              </td>
+                              <td class="align-middle">
+                                  <form action="/products/retiraDelCarrito/<%= producto.id %>?_method=PUT" method="POST"
+                                      enctype="multipart/form-data" class="col-1" style="margin: auto 0; padding: 0;">
+                                      <button class="btn text-dark" style="font-size: 20px ;margin: 0; background-color: transparent;" type="submit"><i class="fa fa-trash"></i></button>
+                                  </form>
+                              </td>
+                            </tr>
+                            <% }}) %>
+                          </tbody>
+                        </table>
+                      </div>
+            
+                <!-- fin detalle de compra  -->
+            
+            </div>
+
+            <!-- METODOS DE PAGO, CODIGO DESCUENTO Y  METODO DE ENVIO-->
+
+            
+            </div>
+            <div class="container">
+                <div class="row px-4 bg-white rounded shadow-sm">
+                    <div class="col-12">
+                      <div style="background-color:#59222F ; color: white;" class="card-header px-4 font-weight-bold">Orden de compra</div>
+                      <div class="p-4">
+                        <p class="font-italic mb-4">Porfavor verifique que tanto los productos como la cantidad que quiere del mismo esten correctas</p>
+                        <ul class="list-unstyled mb-4">
+                          <div class="row">
+                          <% productoEnCarrito.forEach(producto => { %>
+                              <% if (producto.id_user == user.id ) { %>
+                                  
+                          <div class="col-6 my-4">
+                          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Precio de los productos</strong><strong><%- producto.productos.precio %></strong></li>
+                          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">cantidad</strong><strong><%- producto.cantidad %> </strong></li>      
+                          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Envio</strong><strong>$0.00</strong></li>
+                          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Impuestos</strong><strong>$0.00</strong></li>
+                          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+                            <h5 class="font-weight-bold"><%- (producto.productos.precio)*(producto.cantidad) %></h5>
+                          </div>
+                          
+                            <% }}) %>
+                          </div>
+                          </li>
+                        </ul>
+                        
+                      <div class="container text-center">
+                        <div class="botonesAccion row">
+                            <div class="accion col-4">
+                                <a href="/products"><button class="botones btn btn-carrito" type="button">Seguir
+                                        comprando</button></a>
+                            </div>
+                            <form class="col-4" action="/products/deleteAllCarrito?_method=PUT" method="POST">
+                                <div class=" accion">
+            
+                                    <button class="botones btn btn-carrito" type="submit" >Vaciar
+                                        carrito</button>
+                                </div>
+                            </form>
+                            <form class="col-4" action="/products/cart/confirm?_method=PUT" method="POST">
+                                <a href="/products/cart/confirm"><button class="botones btn btn-carrito" type="submit">Finalizar
+                                    compra</button></a>
+                            </form>
+                        </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+             
+            <%} %>
+                    <!-- SECCIÓN CAROUSEL -->
+                    <%- include('partials/carrouselRecomendados.ejs') %>
+
+    </main>
+
+      
+    <!--====  End of Content  ====-->
+
+    <!-- footer -->
+    <%- include('partials/footer.ejs') %>
+    <!-- scripts -->
+    <%- include('partials/scripts.ejs') %>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.center').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      prevArrow:'<i class="next_arrow fas fa-chevron-circle-left"></i>',
+      nextArrow:'<i class="prev_arrow fas fa-chevron-circle-right"></i>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+        });
+      </script>
+</body>
+
+</html>
