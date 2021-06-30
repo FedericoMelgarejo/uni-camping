@@ -508,9 +508,9 @@
                                         <table class="table">
                                             <thead class="thead" style="background-color: #59222F; color: white;">
                                               <tr>
-                                                <th scope="col">#</th>
+                                                
                                                 <th scope="col">Usuario</th>
-                                                <th scope="col">Producto</th>
+                                                <th scope="col">Compra</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Cantidad</th>
                                               </tr>
@@ -522,7 +522,7 @@
                                                             <% usuarios.forEach(usuario=>{ %> 
                                                                 <% if(venta.id_users == usuario.id){ %>    
                                                                 <tr>
-                                                                    <th scope="row">#</th>
+                                                                    
                                                                     <td><%=usuario.nombre %></td>
                                                                     <td><%=product.nombre %></td>
                                                                     <td><%=usuario.email %></td>

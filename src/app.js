@@ -11,6 +11,7 @@ const methodOverride = require('method-override');
 
 const session = require('express-session');
 const localsUserCheck = require("./middlewares/localsUserCheck")
+
 // view engine setup
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'));
@@ -35,8 +36,8 @@ const categoriesApi = require("./routes/api/categoriesApi")
 
 
 //servidor
-const PUERTO = process.env.PORT
-app.listen(PUERTO)
+const PUERTO = process.env.PORT || 8080
+app.listen(PUERTO, () => console.log("El servidor esta funcionando en el puerto " + PUERTO + " ---> http://localhost:" + PUERTO + "/"))
 
 //URL
 app.use('/', index)
